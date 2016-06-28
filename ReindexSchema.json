@@ -1,0 +1,44 @@
+[
+  {
+    name: "User",
+    kind: "OBJECT",
+    interfaces: [
+      "Node"
+    ],
+    fields: [
+      {
+        name: "id",
+        type: "ID",
+        nonNull: true,
+        unique: true
+      }
+    ]
+  },
+  {
+    name: "Beat",
+    kind: "OBJECT",
+    interfaces: [
+      "Node"
+    ],
+    fields: [
+      {
+        name: "id",
+        type: "ID",
+        nonNull: true,
+        unique: true
+      },
+      {
+        name: "rh",
+        type: "Int",
+        nonNull: true,
+        unique: false
+      },
+      {
+        name: "lh",
+        type: "Int",
+        nonNull: true,
+        unique: false
+      }
+    ]
+  }
+]
