@@ -6,6 +6,7 @@
 
 import stampit from 'stampit';
 import {range} from 'lodash';
+import QAudio from './audio/qaudio';
 
 export const Metronome = stampit({
     init({classicTicksPerMinute = 60, classicTicksPerBeat = 1}) {
@@ -28,6 +29,12 @@ export const Metronome = stampit({
                 offset += duration;
                 return result;
             });
+        },
+        playBeat(beat) {
+            const buffer = QAudio.tone_1000hz;
+            this.tickStartTimeOffsetsForBeat(beat).forEach((offset) => {
+                QAudio.startBufferAtTime(buffer, offset);
+            })
         }
     }
 });

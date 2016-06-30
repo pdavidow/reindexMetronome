@@ -2,17 +2,20 @@ import React, {Component} from 'react';
 import Relay from 'react-relay';
 
 import QAudio from '../models/audio/qaudio';
+import {Metronome} from '../models/metronome';
+import {Beat} from '../models/beat';
 
 class MetronomeApp extends Component {
     state = {
         count: 0,
+        metronome: Metronome({classicTicksPerMinute: 60, classicTicksPerBeat: 12})
     };
 
     start = () => {
         this.setState({
             count: this.state.count + 1,
         });
-        QAudio.play();
+        this.state.metronome.playBeat(Beat({rh: 3, lh: 4}));
     };
 
     componentDidMount = () => {
