@@ -4,29 +4,30 @@ import Relay from 'react-relay';
 import QAudio from '../models/audio/qaudio';
 
 class MetronomeApp extends Component {
-    getInitialState () {
-        return { count: 0 };
-    }
-  start() {
-      /*
-      this.setState({
-          count: this.state.count + 1,
-      });
-      */
-      QAudio.play();
-  }
-  componentDidMount() {
-      QAudio.initializeSound_onFinishedLoading(()=>console.log("FinishedLoading"));
-  }
-  render() {
+    state = {
+        count: 0,
+    };
+
+    start = () => {
+        this.setState({
+            count: this.state.count + 1,
+        });
+        QAudio.play();
+    };
+
+    componentDidMount = () => {
+      QAudio.initializeSound_onFinishedLoading(() => console.log("Finished Loading Audio"));
+    };
+
+    render = () => {
       return (
         <div>
           <button onClick={this.start}>
-            Start {'(count: ' + '(this.state.count)' + ')'}
+            Start {'(count: ' + (this.state.count) + ')'}
           </button>
         </div>
       )
-  }
+    };
 };
 
 export default Relay.createContainer(MetronomeApp, {
