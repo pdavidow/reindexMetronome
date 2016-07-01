@@ -6,7 +6,7 @@
 
 import stampit from 'stampit';
 import {range} from 'lodash';
-import QAudio from './audio/qaudio';
+import {QAudio} from './audio/qaudio';
 
 export const Metronome = stampit({
     init({classicTicksPerMinute = 60, classicTicksPerBeat = 1}) {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Relay from 'react-relay';
 
-import QAudio from '../models/audio/qaudio';
+import {QAudio} from '../models/audio/qaudio';
 import {Metronome} from '../models/metronome';
 import {Beat} from '../models/beat';
 
@@ -20,7 +20,7 @@ class MetronomeApp extends Component {
     };
 
     componentDidMount = () => {
-      QAudio.initializeSound_onFinishedLoading(() => console.log("Finished Loading Audio"));
+      QAudio.initializeSound(() => console.log("Finished Loading Audio"));
     };
 
     render = () => {

@@ -1,6 +1,6 @@
 // Lifted from http://www.html5rocks.com/en/tutorials/webaudio/intro/js/buffer-loader.js
 
-const BufferLoader = function (context, urlList, callback) { // todo STAMPIT
+export const BufferLoader = function (context, urlList, callback) { 
     this.context = context;
     this.urlList = urlList;
     this.onload = callback;
@@ -46,5 +46,3 @@ BufferLoader.prototype.load = function() {
     for (var i = 0; i < this.urlList.length; ++i)
         this.loadBuffer(this.urlList[i], i);
 };
-
-export default BufferLoader;
