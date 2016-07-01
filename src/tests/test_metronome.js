@@ -108,4 +108,3 @@ test('Given a beat and a metronome-setting, calc tick start time offset (sec)', 
 
     assert.end();
 });
-

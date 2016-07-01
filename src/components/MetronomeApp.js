@@ -16,7 +16,7 @@ class MetronomeApp extends Component {
         this.setState({
             count: this.state.count + 1,
         });
-        this.state.metronome.playBeat(this.state.beat);
+        this.state.metronome.playBeatTicks(this.state.beat);
     };
 
     componentDidMount = () => {
@@ -27,7 +27,7 @@ class MetronomeApp extends Component {
       return (
         <div>
           <button onClick={this.start}>
-            Start {'(count: ' + (this.state.count) + ')'}
+             Start {'(count: ' + (this.state.count) + ')'}
           </button>
         </div>
       )

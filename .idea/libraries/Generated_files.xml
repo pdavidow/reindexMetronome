@@ -7,19 +7,22 @@
         <item url="file://$PROJECT_DIR$/src/components/MetronomeApp-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/models/audio/qaudio-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/tests/test_metronome-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/models/metronome-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/tests/test_metronome_browser-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/routes/AppRoute-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/src/models/audio/audio-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/App-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/models/audio/audio-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/App-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/tests/test_beat-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/App-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/models/audio/buffer_loader-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/MetronomeApp-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/models/audio/qaudio-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/tests/test_metronome-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/models/metronome-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/tests/test_metronome_browser-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/routes/AppRoute-compiled.js" />
     </CLASSES>
     <SOURCES />

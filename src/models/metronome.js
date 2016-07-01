@@ -30,12 +30,13 @@ export const Metronome = stampit({
                 return result;
             });
         },
-        playBeat(beat) {
+        playBeatTicks(beat, onEnded = ()=>{}) {
             const timeAtStart = QAudio.currentTime();
             const buffer = QAudio.tone_1000hz;
 
             this.tickStartTimeOffsetsForBeat(beat).forEach((offset) => {
-                QAudio.startBufferAtTime(buffer, timeAtStart + offset);
+                let source = QAudio.startBufferAtTime(buffer, timeAtStart + offset);
+                source.onended = onEnded;
             })
         }
     }
