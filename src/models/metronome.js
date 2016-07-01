@@ -31,9 +31,11 @@ export const Metronome = stampit({
             });
         },
         playBeat(beat) {
+            const timeAtStart = QAudio.currentTime();
             const buffer = QAudio.tone_1000hz;
+
             this.tickStartTimeOffsetsForBeat(beat).forEach((offset) => {
-                QAudio.startBufferAtTime(buffer, offset);
+                QAudio.startBufferAtTime(buffer, timeAtStart + offset);
             })
         }
     }

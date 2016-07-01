@@ -43,6 +43,9 @@ const QAudio = { // todo STAMPIT
     play: function () {
         console.log("...play");
         QAudio.startBufferAtTime(QAudio.tone_1000hz, 0);
+    },
+    currentTime: function () {
+        return QAudio.context.currentTime;
     }
 };
 

@@ -8,6 +8,7 @@ import {Beat} from '../models/beat';
 class MetronomeApp extends Component {
     state = {
         count: 0,
+        beat: Beat({rh: 3, lh: 4}),
         metronome: Metronome({classicTicksPerMinute: 60, classicTicksPerBeat: 12})
     };
 
@@ -15,7 +16,7 @@ class MetronomeApp extends Component {
         this.setState({
             count: this.state.count + 1,
         });
-        this.state.metronome.playBeat(Beat({rh: 3, lh: 4}));
+        this.state.metronome.playBeat(this.state.beat);
     };
 
     componentDidMount = () => {
