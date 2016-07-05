@@ -5,7 +5,7 @@ import {QAudio} from '../models/audio/qaudio';
 import {Metronome} from '../models/metronome';
 import {Beat} from '../models/beat';
 
-class MetronomeApp extends Component {
+class MetronomeComponent extends Component {
     state = {
         count: 0,
         beat: Beat({rh: 3, lh: 4}),
@@ -34,7 +34,7 @@ class MetronomeApp extends Component {
     };
 };
 
-export default Relay.createContainer(MetronomeApp, {
+export default Relay.createContainer(MetronomeComponent, {
     fragments: {
         viewer: () => Relay.QL`
       fragment on ReindexViewer {

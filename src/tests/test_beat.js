@@ -5,7 +5,6 @@
 
 import test from 'tape';
 import {Beat} from '../models/beat';
-import {isEqual} from 'lodash';
 
 test('Beat tick count', (assert) => {
     const msg = 'Beat tick count should equal lowest common multiple of rh and lh';
@@ -26,15 +25,15 @@ test('Beat rh tick indices', (assert) => {
 
     let actual = Beat({rh: 3, lh: 1}).rhTickIndices();
     let expected = [0,1,2];
-    assert.ok(isEqual(actual, expected), msg);
+    assert.same(actual, expected, msg);
 
     actual = Beat({rh: 3, lh: 4}).rhTickIndices();
     expected = [0,4,8];
-    assert.ok(isEqual(actual, expected), msg);
+    assert.same(actual, expected, msg);
 
     actual = Beat({rh: 8, lh: 6}).rhTickIndices();
     expected = [0,3,6,9,12,15,18,21];
-    assert.ok(isEqual(actual, expected), msg);
+    assert.same(actual, expected, msg);
 
     assert.end();
 });
@@ -44,15 +43,15 @@ test('Beat lh tick indices', (assert) => {
 
     let actual = Beat({rh: 3, lh: 1}).lhTickIndices();
     let expected = [0];
-    assert.ok(isEqual(actual, expected), msg);
+    assert.same(actual, expected, msg);
 
     actual = Beat({rh: 3, lh: 4}).lhTickIndices();
     expected = [0,3,6,9];
-    assert.ok(isEqual(actual, expected), msg);
+    assert.same(actual, expected, msg);
 
     actual = Beat({rh: 8, lh: 6}).lhTickIndices();
     expected = [0,4,8,12,16,20];
-    assert.ok(isEqual(actual, expected), msg);
+    assert.same(actual, expected, msg);
 
     assert.end();
 });
